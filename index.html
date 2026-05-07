@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Runner Game</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <a href="information.html"></a>
+
+<!-- 🎯 MENU -->
+<div id="menu">
+
+  <h1>Choose Character</h1>
+
+  <div class="characters">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" onclick="selectChar(this)">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" onclick="selectChar(this)">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" onclick="selectChar(this)">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616494.png" onclick="selectChar(this)">
+  </div>
+
+  <button onclick="startGame()">Start Game</button>
+  <button onclick="location.href='score.html'">🏆 High Score</button>
+  <button onclick="location.href='information.html'">information</button>
+
+</div>
+
+<!-- 🎮 GAME -->
+<div class="game" id="game">
+
+  <div id="player"></div>
+  <div id="obstacle"></div>
+
+  <h1 id="score">0</h1>
+
+  <!-- 💀 GAME OVER -->
+  <div id="gameOver">
+    <h1>Game Over 💀</h1>
+    <p id="finalScore"></p>
+    <button onclick="location.reload()">Restart</button>
+  </div>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>

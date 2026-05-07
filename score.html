@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>High Score</title>
+</head>
+<body style="background:#111;color:white;text-align:center;font-family:sans-serif;">
+
+  <h1>🏆 High Score</h1>
+
+  <h2 id="highScore">0</h2>
+
+  <button onclick="location.href='new_game.html'">Back to Game</button>
+
+  <script>
+    let high = localStorage.getItem("highScore")
+
+    if(!high){
+      high = 0
+    }
+
+    document.getElementById("highScore").innerText = high
+  </script>
+
+</body>
+</html>
